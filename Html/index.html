@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Theme  -->
+  <title>Music Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="static/reset.css">
+  <link rel="stylesheet" href="static/style.css">
+
+  <style>
+      a:link, a:visited {
+        color:rgb(49, 48, 48);
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 130%;
+    
+      }
+      
+      a:hover, a:active {
+        background-color: rgba(240,240,240, 0.5);
+      }
+      </style>
+</head>
+
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <!-- <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> -->
+        </button>
+        <a class="navbar-brand" href="../index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="viz.html" style="font-size: 14px;">VISUALIZATION</a></li>
+            <li><a href="models_html/models_overview.html" style="font-size: 14px;">MACHINE LEARNING</a></li>
+            <li><a href="data.html" style="font-size: 14px;">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--music image header -->
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h2>Proudly presents</h2>
+  <h1 style="font-size:60px">Will AI be able to predict hit music?</h1>
+  <br>
+  <p>By Joyce, Sherry, Sherry and Zara</p>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid text-center" id="block2">
+  <h2 class="margin">OUR PROJECT</h2>
+  <p style="font-size: 16px;">Could machine learning algorithms predict a song would blown up?
+    We tackled this question by focusing on data subtracted from the past three decades. Datasets
+    were built to try to find chages in hit music features through year, and the differences 
+    between popular and unpopular music. A number of different models were built to train and test,
+    Random Forest and Support Vector Machine appeared to be the ones with highest accuracy in both
+    cases. But overall, based on the dataset created and model built, our work could not confirm that it is
+    possible to predict a hit song. 
+    </p>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid text-center" id="block3">    
+  <h2 class="margin">VISUALIZATION</h2><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Radar Chart</p>
+      <img src=static/image/radar-dictinct2.png class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Scatter Plot</p>
+      <img src=static/image/kf1.jpg class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Bar & Line</p>
+      <img src=static/image/kf2.jpg class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+        <p>Bar & Scatter</p>
+        <br>
+        <img src=static/image/kf3.jpg class="img-responsive margin" style="width:120%" alt="Image">
+      </div>
+  </div>
+</div>
+
+<!-- fourth Container (Grid) -->
+<div class="container-fluid text-center" id="block4">    
+  <h2 class="margin">MACHINE LEARNING</h2><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <a href="models_html/models_overview.html">Models Overview</a> 
+    </div>
+    <div class="col-sm-3"> 
+      <a href="models_html/DT.html">Decision Tree</a>
+    </div>
+    <div class="col-sm-3"> 
+      <a href="models_html/RF.html">Random Forest</a>
+    </div>
+    <div class="col-sm-3"> 
+      <a href="models_html/NN.html">Neural Network</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <a href="models_html/KNN.html">K-Nearest Neighbors</a>
+    </div>
+    <div class="col-sm-3"> 
+      <a href="models_html/GNB.html">Gaussian Naive Bayes</a>
+    </div>
+    <div class="col-sm-3"> 
+      <a href="models_html/SVM.html">Support Vector Machines</a>
+    </div>
+    <div class="col-sm-3"> 
+      <a href="models_html/LR.html">Logistic Regression</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid text-center" id="block5">
+  <p>DataBootcamp Project presented by Team SW</p> 
+</footer>   
+
+</body>
+</html>

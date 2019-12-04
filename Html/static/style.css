@@ -1,0 +1,125 @@
+body {
+  font: 16px Montserrat, sans-serif;
+  /* line-height: 1.8; */
+  /* color: #f5f6f7; */
+}
+
+p {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 25px;
+}
+
+.margin {margin-bottom: 45px;}
+
+h1 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+#data_page_li {
+  padding: 10px;
+}
+
+#data_page_titles {
+  font-weight: bold;
+}
+
+/* .bg-1 { 
+  background-color: #1abc9c; /* Green */
+/* color: #ffffff;
+} */
+
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.margin {
+  margin-bottom: 30px;
+  font-size: 20px;}
+
+#block2 { 
+  background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#block3 { 
+  background-color: #ffffff; /* White */
+  color: #555555;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#block4 {
+  background-color: rgb(25, 160, 165); /* Dark Green */
+  color: #ffffff;
+}
+
+#block5 { 
+  background-color: #2f2f2f; /* Black Gray */
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+} 
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("image/newsound.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(0.5px);
+  -webkit-filter: blur(0.5px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  /* background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+

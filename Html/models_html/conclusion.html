@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Theme  -->
+    <title>Music X Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 120%;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color:rgb(21, 130, 167);
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color:lightblue;
+  color: white;
+  font-style:italic;
+}
+
+div.content {
+  margin-left: 250px;
+  margin-right:200px;
+  margin-top:30px;
+  padding: 1px 16px;
+  height: 1000px;
+  font-size:130%;
+}
+
+
+</style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="../index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../viz.html">VISUALIZATION</a></li>
+          <li><a href="models_overview.html">MACHINE LEARNING</a></li>
+          <li><a href="../data.html">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- Second Container -->
+<div class="sidebar">
+  <a href="models_overview.html">Models Overview</a> 
+  <a href="DT.html">Decision Tree</a>
+  <a href="RF.html">Random Forest</a>
+  <a href="NN.html">Neural Network</a>
+  <a href="KNN.html">K-Nearest Neighbors </a>
+  <a href="GNB.html">Gaussian Naive Bayes </a>
+  <a href="SVM.html">Support Vector Machines</a>
+  <a href="LR.html">Logistic Regression</a>
+  <a href="pyspark.html">PySpark</a>
+  <a class="active" href="conclusion.html">Conclusion & Possible Improvements</a>
+</div>
+
+<div class="content">
+  <h2>Conclusion</h2>
+  <br>
+  <p>The aim of this work was to further investigate whether or not it is possible to use machine learning techniques to predict hit songs. Our work could not confirm that it is possible (the average accuracy of 7 models we selected was 39%), although some other research has shown more promising results. So the result we derived is only based on the dataset we selected and the models we built. </p>
+  <br>
+  <hr>
+  <h2>Possible Improvements and Future Work</h2>
+  <br>
+  <p>There are a number of improvements that would be interesting to consider for future research within this field. </p>
+  <br>
+  <ul>
+    <li>We could use more features than we did in our research. We believe that including more metadata such as genre, label, lyrics, artist name, and artist popularity would improve the accuracy of the models considerably. </li>
+    <br>
+    <li>Since all songs in our dataset are ‘recent’ songs only, which eliminates the fact that hit music evolves over time. With a future expansion in music released years, higher accuracies may be achieved.</li>
+    <br>
+    <li>The datasets of hit and non-hit music are unbalanced in music types because of the data source we acquired. The hit music dataset covers more diverse types.  A future expansion of non-hit music by adding more diverse subdivided music types, which we believe will yield higher accuracy and better results.</li>
+</ul>
+</div>
+
+<script src="..\model.js"></script>  
+
+</body>
+</html>

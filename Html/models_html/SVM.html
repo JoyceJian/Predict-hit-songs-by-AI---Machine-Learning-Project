@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Theme  -->
+    <title>Music X Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 120%;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color:rgb(21, 130, 167);
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color:lightblue;
+  color: white;
+  font-style:italic;
+}
+
+div.content {
+  margin-left: 250px;
+  margin-right:200px;
+  margin-top:30px;
+  padding: 1px 16px;
+  height: 1000px;
+  font-size:130%;
+}
+
+
+</style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="../index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../viz.html">VISUALIZATION</a></li>
+          <li><a href="models_overview.html">MACHINE LEARNING</a></li>
+          <li><a href="../data.html">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- Second Container -->
+<div class="sidebar">
+  <a href="models_overview.html">Models Overview</a> 
+  <a href="DT.html">Decision Tree</a>
+  <a href="RF.html">Random Forest</a>
+  <a href="NN.html">Neural Network</a>
+  <a href="KNN.html">K-Nearest Neighbors </a>
+  <a href="GNB.html">Gaussian Naive Bayes </a>
+  <a class="active" href="SVM.html">Support Vector Machines</a>
+  <a href="LR.html">Logistic Regression</a>
+  <a href="pyspark.html">PySpark</a>
+  <a href="conclusion.html">Conclusion & Possible Improvements</a>
+</div>
+
+<div class="content">
+  <h2>Support Vector Machines</h2>
+  <br>
+  <p>We then used SVM, which creates a decision boundary based on the data points closest to the decision boundaries, creating support vectors. We maximize the Lagrangian on the training set with respect to values of alpha as follows. </p>
+  <p> This model gives a test accuracy of 0.40.The following table displays the confusion matrix of this model.</p>
+  <br>
+  <img src="..\static/image/cm_year_svm.jpg" alt="tree" width=450px style="display:block;margin-left: auto; margin-right: auto;">
+</div>
+
+<script src="..\model.js"></script>  
+
+</body>
+</html>

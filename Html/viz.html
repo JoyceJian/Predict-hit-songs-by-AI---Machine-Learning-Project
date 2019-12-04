@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Theme  -->
+    <title>Visualization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <!-- <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> -->
+        </button>
+        <a class="navbar-brand" href="index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="viz.html">VISUALIZATION</a></li>
+          <li><a href="models_html/models_overview.html">MACHINE LEARNING</a></li>
+          <li><a href="data.html">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Second Container -->
+<div class="container">
+  <div class="row" style="margin: 20px;">
+    <div class="col-md-12">
+      <h1>Visualization</h1>
+      <h3>Datasets Exploration</h3>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 20px;">
+    <div class="col-md-7" >
+      <h3>Radar Chart</h3>
+      <img src=static/image/radar-dictinct2.png alt="radar" width=600px height=auto>
+    </div>
+    <div class="col-md-5">
+      <h3>Distribution by line chart</h3>
+      <a href="https://public.tableau.com/profile/yidan7394#!/vizhome/DBKeyFeatures/1_DBKeyFeatures"
+        target="blank">
+        <img src=static/image/tableau.jpeg alt="tableau link" width=600px></a>
+    </div>
+    <div class="row" style="margin: 20px;">
+      <div class="col-md-7" >
+        <h3>Radar Chart collapsed</h3>
+        <img src=static/image/radar-collapsed.png alt="radar" width=600px height=auto>
+      </div>
+      <div class="col-md-5" >
+        <h3>Distribution by bar & scatter plot </h3>
+        <a href="https://public.tableau.com/profile/yidan7394#!/vizhome/DBKeyFeatures/Dashboard3?publish=yes" target="blank"><img src=static/image/kf3.jpg alt="radar" width=700px height=auto></a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="col-md-12">
+        <h3>Highlights:</h3>
+        <ul>
+          <li>Principal positive audio features (radar charts):</li>
+            <p>The 7 audio features (0~1) have very similar patterns in the 4 years being studied.</p>
+          <li>Only negative feature (loudness):</li>
+            <p>Our loudness data is all negative ranging mainly from (0,-8), showing no huge discrepancy year over year. 
+            </p>
+            <li>Other features at a glance(Tableau Public):</li>
+            <p>Other audio features have fairly different scale than those discussed earlier, thus they are graphed seperatly. </p>
+        </ul>
+    </div>
+  </div>
+</div>
+  
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="./static/logic.js"></script> -->
+
+
+</body>
+</html>

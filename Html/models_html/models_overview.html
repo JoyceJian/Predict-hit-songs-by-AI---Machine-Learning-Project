@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Theme  -->
+    <title>Music X Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+      .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+      font-size: 120%;
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+ 
+    .sidebar a.active {
+      background-color:rgb(21, 130, 167);
+      color: white;
+    }
+
+    .sidebar a:hover:not(.active) {
+      background-color:lightblue;
+      color: white;
+      font-style:italic;
+    }
+
+    div.content {
+      margin-left: 250px;
+      margin-right:200px;
+      margin-top:30px;
+      padding: 1px 16px;
+      height: 1000px;
+      font-size:130%;
+    }
+
+    </style>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="../index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../viz.html">VISUALIZATION</a></li>
+          <li><a href="models_overview.html">MACHINE LEARNING</a></li>
+          <li><a href="../data.html">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <a class="active" href="models_overview.html">Models Overview</a>  
+  <a href="DT.html">Decision Tree</a>
+  <a href="RF.html">Random Forest</a>
+  <a href="NN.html">Neural Network</a>
+  <a href="KNN.html">K-Nearest Neighbors</a>
+  <a href="GNB.html">Gaussian Naive Bayes</a>
+  <a href="SVM.html">Support Vector Machines</a>
+  <a href="LR.html">Logistic Regression</a>
+  <a href="pyspark.html">PySpark</a>
+  <a href="conclusion.html">Conclusion & Possible Improvements</a>
+</div>
+
+<!--Contents-->
+<div class="content">
+  <h2>Models Overview</h2>
+  <br>
+  <p>In this work we are focusing on supervised learning, since we are
+        working with a labelled dataset. We know which examples in our data
+        that are hits and we want to see if we can find a pattern that separates
+        these from non-hits. The task is to construct models to predict the label
+        of a song, if it is a hit or a non-hit. For this reason, we picked the following common
+        machine learning techniques which is used in supervised learning.</p>
+  <br>
+  <ul>
+    <li>Decision Tree</li>
+    <li>Random Forest</li>
+    <li>Neural Network</li>
+    <li>K-Nearest Neighbors</li>
+    <li>Gaussian Naive Bayes</li>
+    <li>Support Vector Machines</li>
+    <li>Logistic Regression</li>
+  </ul>
+  <br>
+  <h4>Based on our tests, the accuracy of each model is shown as below.</h4>
+  <br>
+  <div id="model_summary" class="container-fluid bg-2 text-center" style="width: 680px; height: 400px;"></div>
+
+</div>
+
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="../overview_graph.js"></script>
+
+
+</body>
+</html>

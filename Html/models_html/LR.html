@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Theme  -->
+    <title>Music X Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 120%;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color:rgb(21, 130, 167);
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color:lightblue;
+  color: white;
+  font-style:italic;
+}
+
+div.content {
+  margin-left: 250px;
+  margin-right:200px;
+  margin-top:30px;
+  padding: 1px 16px;
+  height: 1000px;
+  font-size:130%;
+}
+
+
+</style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="../index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../viz.html">VISUALIZATION</a></li>
+          <li><a href="models_overview.html">MACHINE LEARNING</a></li>
+          <li><a href="../data.html">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- Second Container -->
+<div class="sidebar">
+  <a href="models_overview.html">Models Overview</a> 
+  <a href="DT.html">Decision Tree</a>
+  <a href="RF.html">Random Forest</a>
+  <a href="NN.html">Neural Network</a>
+  <a href="KNN.html">K-Nearest Neighbors </a>
+  <a href="GNB.html">Gaussian Naive Bayes </a>
+  <a href="SVM.html">Support Vector Machines </a>
+  <a class="active" href="LR.html">Logistic Regression</a>
+  <a href="pyspark.html">PySpark</a>
+  <a href="conclusion.html">Conclusion & Possible Improvements</a>
+</div>
+
+<div class="content">
+  <h2>Logistic Regression</h2>
+  <br>
+  <p>Our final approach was to use the Logistic Regression algorithm with the labels of a randomly selected 20 percent of the examples. This algorithm assigns observations to a discrete set of classes. It transforms its output using the logistic sigmoid function to return a probability value which can then be mapped to two or more discrete classes.</p>
+  <br>
+  <p>For each supervised learning algorithm, we split the data into training and validation examples using a 75/25 split. An additional test set was not needed. We tested the accuracy against both the training and validation labels. LR fits a decision boundary to the data. LR uses Newtons Method to maximise the logarithmic likelihood on the training set, with the following algorithm. </p>
+  <br>
+  <p> This model gives a test accuracy of 0.4096.The following table displays the confusion matrix of this model.</p>
+  <br>
+  <img src="..\static/image/cm_year_lg.jpg" alt="tree" width=450px style="display:block;margin-left: auto; margin-right: auto;">
+</div>
+
+<script src="..\model.js"></script>  
+
+</body>
+</html>

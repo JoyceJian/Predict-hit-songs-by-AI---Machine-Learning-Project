@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Theme  -->
+  <title>Music X Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="static/reset.css">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default  " style="margin-bottom:0px">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">Our Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="viz.html" style="font-size: 14px;">VISUALIZATION</a></li>
+          <li><a href="models_html/models_overview.html" style="font-size: 14px;">MACHINE LEARNING</a></li>
+          <li><a href="data.html" style="font-size: 14px;">DATA</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <div class="row" style= "margin: 20px;">
+      <div class="col-md-6">
+        <h1 id="data_page_titles">Data Extract and Preprocess</h1>
+        <br>
+        <p>Two datasets were built to support machine learning models. </p>
+        <br>
+        <p>First data set of 4700 songs was collected from Billboard Hot-100 Chart in years 1990, 2000, 2010,
+          and 2019, using Billboard API library 
+          <a href = "https://github.com/guoguo12/billboard-charts" target = "blank">[1]</a>. 
+          We fetched charts at the beginning of each month, resulting in 12 charts in total per year for 1990, 
+          2000, 2010; for year 2019, there were 11. 
+        </p>
+        <p>
+          Next, we searched the song titles on Spotify using a lightweight python library called Spotipy. 
+          Each song has a unique track ID on Spotify, the IDs were then used to read in audio features. 
+          Given that there were songs not available on Spotify--in other words, without a corresponding ID--
+          and songs without corresponding audio features were dropped, there are a total of 4672 songs in the 
+          final dataset. 
+        </p>
+        <br>
+        <p>
+          The other data set contained songs published by artists who are on the Spotify Top 100 Artist Charts 
+          <a href = "https://rateyourmusic.com/list/NicklasWachter/spotify-top-100-artists-chart-14_may_2019/" target = "blank">[2]</a>. 
+          The artists were selected such that they published at least one full album in the past 5 years (2015-2019), 
+          then all the songs they published were filtered so that songs which had not been ranked in the Billboard Hot-100 
+          Charts in the corresponding time frame were categorized as unpopular. Same method was used to fetch the unpopular 
+          songs audio features. 
+        </p>
+      </div>
+
+      <div class = "col-md-6">
+        <br>
+        <a href = "static/image/code2.JPG" target="blank">
+          <img src="static/image/screenshot1.jpeg" alt="code1" width=600px>
+        </a>
+        <br>
+        <a href = "static/image/code1.JPG" target="blank">
+          <img src="static/image/screenshot2.jpeg" alt="code2" width=600px>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6" style= "margin: 20px;">
+        <h1 id="data_page_titles">Dataset Features</h1>
+        <br>
+        <img src="static/image/df.jpeg" alt="dataframe preview" width=1200px>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" style= "margin: 20px;">
+        <p>
+          Some of the audio features provided in Spotify API are listed below:</p>
+        <ul class="data_page_ul">
+          <li id="data_page_li"><strong id="data_page_titles">Acousticness:</strong> A confidence measure of whether the track is acoustic (0.0 ~ 1.0)</li>
+          <li id="data_page_li"><strong id="data_page_titles">Dancebility:</strong> How suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity (0.0 ~ 1.0)</li>
+          <li id="data_page_li"><strong id="data_page_titles">Duration(ms)</strong></li>
+          <li id="data_page_li"><strong id="data_page_titles">Energy:</strong> Represents a perceptual measure of intensity and activity (i.e., death metal scores high, a Bach prelude scores low) (0.0 ~ 1.0) </li>
+          <li id="data_page_li"><strong id="data_page_titles">Instrumentalness:</strong> Predicts whether a track contains no vocals (0.0 ~ 1.0); values above 0.5 are intended to represent instrumental tracks </li>
+          <li id="data_page_li"><strong id="data_page_titles">Liveness:</strong> Detects wether the song was performed live (0.0 ~ 1.0)</li>
+          <li id="data_page_li"><strong id="data_page_titles">Loudness:</strong> The overall loudness of a track in decibels (dB) (-60dB ~ 0dB) </li>
+          <li id="data_page_li"><strong id="data_page_titles">Speechiness:</strong> Detects the presence of spoken words in a track (0.0 ~ 1.0)</li>
+            <ul id="data_page_ul">
+              <li id="data_page_li"> value > 0.66: tracks are probably made entirely of spoken words</li>
+              <li id="data_page_li"> 0.33 < value < 0.66: tracks may contain both music and speech</li>
+              <li id="data_page_li"> value < 0.33: represent music and other non-speech-like tracks</li>
+            </ul>
+          <li id="data_page_li"><strong id="data_page_titles">Tempo:</strong> The overall estimated tempo of a track in beats per minute (BPM)</li>
+          <li id="data_page_li"><strong id="data_page_titles">Valence:</strong> Describe the emotional tendencies: tracks with high valence sound more cheerful, while tracks with low valence sound more negative</li>
+        </ul>
+        <p>Click <a href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/">
+        here</a> to read the full documentation of Spotify audio features.</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</body>
+</html>
