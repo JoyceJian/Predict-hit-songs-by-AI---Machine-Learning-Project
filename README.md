@@ -3,7 +3,7 @@
 Team SW: Sherry, Joyce, Zara, Sherry
 
 ### Introduction
-Could machine learning algorithms predict a song would blown up? We tackled this question by focusing on data subtracted from the past three decades. Datasets were built to try to find chages in hit music features through year, and the differences between popular and unpopular music. A number of different models were built to train and test, Random Forest and Support Vector Machine appeared to be the ones with highest accuracy in both cases. 
+Could machine learning algorithms predict a song would blown up? We tackled this question by focusing on data subtracted from the past three decades. Datasets were built to try to find changes in hit music features through year, and the differences between popular and unpopular music. A number of different models were built to train and test, Random Forest and Support Vector Machine appeared to be the ones with highest accuracy in both cases. 
 
 But overall, based on the dataset created and model built, our work could not confirm that it is possible to predict a hit song.
 
