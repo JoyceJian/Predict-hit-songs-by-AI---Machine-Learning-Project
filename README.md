@@ -7,7 +7,7 @@ Could machine learning algorithms predict a song would blown up? We tackled this
 
 But overall, based on the dataset created and model built, our work could not confirm that it is possible to predict a hit song.
 
-We worked on this project, including building the website from scratch. [Please click here.](https://hyh-sherry.github.io/Project3_Website)
+We worked on this project, including building the website from scratch. [Please click here.](https://hyh-sherry.github.io/hitmusic_predict/)
 
 ### Tools Utilized
     •	Python
